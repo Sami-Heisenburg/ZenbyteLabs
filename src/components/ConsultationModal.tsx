@@ -122,8 +122,28 @@ export default function ConsultationModal({ isOpen, onClose, isLightMode = false
                 isLightMode ? 'border-neutral-200' : 'border-white/10'
               }`}>
                 <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-blue to-brand-purple flex items-center justify-center">
-                    <Zap className="w-4 h-4 text-white" />
+                  <div className={`flex items-center justify-center w-8.5 h-8.5 rounded-lg border transition-colors ${
+                    isLightMode ? 'bg-neutral-100 border-neutral-200' : 'bg-white/5 border border-white/10'
+                  }`}>
+                    <svg viewBox="0 0 200 200" fill="none" className="w-5.5 h-5.5 select-none">
+                      <defs>
+                        <linearGradient id="modalLeftPill" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#E599F7" />
+                          <stop offset="100%" stopColor="#9C78F7" />
+                        </linearGradient>
+                        <linearGradient id="modalRightPill" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#9C78F7" />
+                          <stop offset="100%" stopColor="#5F3DC4" />
+                        </linearGradient>
+                        <linearGradient id="modalDot" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#7048E8" />
+                          <stop offset="100%" stopColor="#5F3DC4" />
+                        </linearGradient>
+                      </defs>
+                      <rect x="52" y="62" width="28" height="85" rx="14" transform="rotate(-30 66 104.5)" fill="url(#modalLeftPill)" />
+                      <rect x="94" y="52" width="28" height="85" rx="14" transform="rotate(-30 108 94.5)" fill="url(#modalRightPill)" />
+                      <circle cx="140" cy="100" r="14" fill="url(#modalDot)" />
+                    </svg>
                   </div>
                   <div>
                     <h3 className={`font-display font-medium text-lg leading-tight transition-colors ${

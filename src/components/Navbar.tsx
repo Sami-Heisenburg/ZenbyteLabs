@@ -76,9 +76,25 @@ export default function Navbar({ onOpenConsultation, isLightMode, onToggleLightM
           <div className={`relative flex items-center justify-center w-9 h-9 rounded-xl overflow-hidden border transition-colors ${
             isLightMode ? 'bg-neutral-900/5 border-neutral-900/10' : 'bg-white/5 border-white/10 group-hover:border-brand-blue/50'
           }`}>
-            <span className="font-display font-bold text-base bg-gradient-to-tr from-brand-blue via-brand-navy to-brand-purple bg-clip-text text-transparent group-hover:scale-110 transition-transform">
-              Z
-            </span>
+            <svg viewBox="0 0 200 200" fill="none" className="w-5.5 h-5.5 group-hover:scale-110 transition-transform duration-300 select-none">
+              <defs>
+                <linearGradient id="navLeftPill" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#E599F7" />
+                  <stop offset="100%" stopColor="#9C78F7" />
+                </linearGradient>
+                <linearGradient id="navRightPill" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#9C78F7" />
+                  <stop offset="100%" stopColor="#5F3DC4" />
+                </linearGradient>
+                <linearGradient id="navDot" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#7048E8" />
+                  <stop offset="100%" stopColor="#5F3DC4" />
+                </linearGradient>
+              </defs>
+              <rect x="52" y="62" width="28" height="85" rx="14" transform="rotate(-30 66 104.5)" fill="url(#navLeftPill)" />
+              <rect x="94" y="52" width="28" height="85" rx="14" transform="rotate(-30 108 94.5)" fill="url(#navRightPill)" />
+              <circle cx="140" cy="100" r="14" fill="url(#navDot)" />
+            </svg>
             <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/10 to-brand-purple/10 opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
           <span className={`font-display font-bold text-lg tracking-tight transition-colors duration-300 ${isLightMode ? 'text-neutral-950' : 'text-white'}`}>

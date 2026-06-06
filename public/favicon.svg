@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="leftPillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E599F7" />
+      <stop offset="100%" stop-color="#9C78F7" />
+    </linearGradient>
+    <linearGradient id="rightPillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C78F7" />
+      <stop offset="100%" stop-color="#5F3DC4" />
+    </linearGradient>
+    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7048E8" />
+      <stop offset="100%" stop-color="#5F3DC4" />
+    </linearGradient>
+  </defs>
+  <!-- Left Pill -->
+  <rect x="52" y="62" width="28" height="85" rx="14" transform="rotate(-30 66 104.5)" fill="url(#leftPillGrad)" />
+  <!-- Right Pill -->
+  <rect x="94" y="52" width="28" height="85" rx="14" transform="rotate(-30 108 94.5)" fill="url(#rightPillGrad)" />
+  <!-- Dot -->
+  <circle cx="140" cy="100" r="14" fill="url(#dotGrad)" />
+</svg>

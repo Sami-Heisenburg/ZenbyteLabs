@@ -135,9 +135,25 @@ export default function PageLoader({ isLightMode = false, onComplete }: PageLoad
                   repeat: Infinity
                 }}
               >
-                <span className="font-display font-black text-xl bg-gradient-to-tr from-brand-blue via-violet-400 to-brand-purple bg-clip-text text-transparent">
-                  Z
-                </span>
+                <svg viewBox="0 0 200 200" fill="none" className="w-7 h-7 select-none">
+                  <defs>
+                    <linearGradient id="loadLeftPill" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#E599F7" />
+                      <stop offset="100%" stopColor="#9C78F7" />
+                    </linearGradient>
+                    <linearGradient id="loadRightPill" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#9C78F7" />
+                      <stop offset="100%" stopColor="#5F3DC4" />
+                    </linearGradient>
+                    <linearGradient id="loadDot" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#7048E8" />
+                      <stop offset="100%" stopColor="#5F3DC4" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="52" y="62" width="28" height="85" rx="14" transform="rotate(-30 66 104.5)" fill="url(#loadLeftPill)" />
+                  <rect x="94" y="52" width="28" height="85" rx="14" transform="rotate(-30 108 94.5)" fill="url(#loadRightPill)" />
+                  <circle cx="140" cy="100" r="14" fill="url(#loadDot)" />
+                </svg>
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/10 to-[#8643F5]/10" />
               </motion.div>
             </div>

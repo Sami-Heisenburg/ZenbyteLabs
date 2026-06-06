@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" fill="none">
+  <defs>
+    <linearGradient id="fullLeftPill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E599F7" />
+      <stop offset="100%" stop-color="#9C78F7" />
+    </linearGradient>
+    <linearGradient id="fullRightPill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C78F7" />
+      <stop offset="100%" stop-color="#5F3DC4" />
+    </linearGradient>
+    <linearGradient id="fullDot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7048E8" />
+      <stop offset="100%" stop-color="#5F3DC4" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Symbol part (scaled and shifted left) -->
+  <g transform="translate(-10, -15) scale(0.75)">
+    <!-- Left Pill -->
+    <rect x="52" y="62" width="28" height="85" rx="14" transform="rotate(-30 66 104.5)" fill="url(#fullLeftPill)" />
+    <!-- Right Pill -->
+    <rect x="94" y="52" width="28" height="85" rx="14" transform="rotate(-30 108 94.5)" fill="url(#fullRightPill)" />
+    <!-- Dot -->
+    <circle cx="140" cy="100" r="14" fill="url(#fullDot)" />
+  </g>
+
+  <!-- Typography part (fill responsive to light/dark themes via currentColor) -->
+  <text x="125" y="62" fill="currentColor" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="34" letter-spacing="0.05em">ZENBYTELABS</text>
+  <text x="127" y="88" fill="currentColor" opacity="0.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="300" font-size="12" letter-spacing="0.32em">SOFTWARE &amp; WEB SOLUTIONS</text>
+</svg>

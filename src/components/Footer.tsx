@@ -52,11 +52,29 @@ export default function Footer({ isLightMode = false }: FooterProps) {
         
         {/* Brand Block Column (4/12 width) */}
         <div className="lg:col-span-4 md:col-span-1 space-y-6">
-          <a href="#" className="flex items-center space-x-2">
-            <div className={`flex items-center justify-center w-8.5 h-8.5 rounded-lg border transition-colors ${
-              isLightMode ? 'bg-neutral-100 border-neutral-200' : 'bg-white/5 border border-white/10'
+          <a href="#" className="flex items-center space-x-2 group">
+            <div className={`flex items-center justify-center w-8.5 h-8.5 rounded-lg border transition-all ${
+              isLightMode ? 'bg-neutral-100 border-neutral-200 group-hover:bg-neutral-200' : 'bg-white/5 border border-white/10 group-hover:border-brand-blue/50'
             }`}>
-              <span className="font-display font-bold text-sm bg-gradient-to-tr from-brand-blue to-brand-purple bg-clip-text text-transparent">Z</span>
+              <svg viewBox="0 0 200 200" fill="none" className="w-5.5 h-5.5 select-none transition-transform group-hover:scale-110 duration-300">
+                <defs>
+                  <linearGradient id="footLeftPill" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#E599F7" />
+                    <stop offset="100%" stopColor="#9C78F7" />
+                  </linearGradient>
+                  <linearGradient id="footRightPill" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#9C78F7" />
+                    <stop offset="100%" stopColor="#5F3DC4" />
+                  </linearGradient>
+                  <linearGradient id="footDot" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#7048E8" />
+                    <stop offset="100%" stopColor="#5F3DC4" />
+                  </linearGradient>
+                </defs>
+                <rect x="52" y="62" width="28" height="85" rx="14" transform="rotate(-30 66 104.5)" fill="url(#footLeftPill)" />
+                <rect x="94" y="52" width="28" height="85" rx="14" transform="rotate(-30 108 94.5)" fill="url(#footRightPill)" />
+                <circle cx="140" cy="100" r="14" fill="url(#footDot)" />
+              </svg>
             </div>
             <span className={`font-display font-bold text-lg tracking-tight transition-colors ${
               isLightMode ? 'text-neutral-900' : 'text-white'
